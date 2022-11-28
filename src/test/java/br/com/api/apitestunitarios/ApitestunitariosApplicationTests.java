@@ -7,7 +7,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 class ApitestunitariosApplicationTests {
 
     @Test
-    void contextLoads() {
+    void main(){
+        ApitestunitariosApplication.main(new String[]{});
     }
+
+
 
 }
