@@ -29,6 +29,7 @@ class UserServiceImplTest {
     public static final String EMAIL    = "lucasbaluart@gmail.com";
     public static final String PASSWORD = "123";
     public static final String OBJETO_NAO_ENCONTRADO = "Objeto nao Encontrado";
+    public static final int INDEX = 0;
     @InjectMocks
     private UserServiceImpl service;
     @Mock
@@ -79,12 +80,12 @@ class UserServiceImplTest {
 
         assertNotNull(respose);
         assertEquals(1, respose.size());
-        assertEquals(User.class , respose.get(0).getClass());
+        assertEquals(User.class , respose.get(INDEX).getClass());
 
-        assertEquals(ID, respose.get(0).getId());
-        assertEquals(NOME, respose.get(0).getNome());
-        assertEquals(EMAIL, respose.get(0).getEmail());
-        assertEquals(PASSWORD, respose.get(0).getPassword());
+        assertEquals(ID, respose.get(INDEX).getId());
+        assertEquals(NOME, respose.get(INDEX).getNome());
+        assertEquals(EMAIL, respose.get(INDEX).getEmail());
+        assertEquals(PASSWORD, respose.get(INDEX).getPassword());
     }
 
     @Test
